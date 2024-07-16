@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidDemo"
 include(":app")
 include(":Activity")
+include(":DataBinding")
