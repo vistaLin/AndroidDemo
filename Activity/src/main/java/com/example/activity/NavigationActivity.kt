@@ -10,42 +10,42 @@ class NavigationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation)
-        println("========onCreateNavigationActivity")
+        println("========onCreatePage2")
     }
 
     override fun onStart() {
         super.onStart()
 
-        println("========onStartNavigationActivity")
+        println("========onStartPage2")
     }
 
     override fun onResume() {
         super.onResume()
 
-        println("========onResumeNavigationActivity")
+        println("========onResumePage2")
     }
 
     override fun onPause() {
         super.onPause()
 
-        println("========onPauseNavigationActivity")
+        println("========onPausePage2")
     }
 
     override fun onStop() {
         super.onStop()
 
-        println("========onStopNavigationActivity")
+        println("========onStopPage2")
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        println("========onRestartNavigationActivity")
+        println("========onRestartPage2")
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        println("========onDestroyNavigationActivity")
+        println("========onDestroyPage2")
     }
 }

@@ -3,9 +3,8 @@
 
     <application>
         <activity
-            android:name=".ActivityLifecycleActivity"
+            android:name=".XMLActivity"
             android:exported="false" />
-        <activity android:name=".NavigationActivity" />
     </application>
 
 </manifest>

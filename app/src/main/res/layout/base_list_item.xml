@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:gravity="center_vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="44dp">
 <TextView
     android:id="@+id/title"
     android:layout_width="match_parent"
     android:layout_marginLeft="20dp"
     android:gravity="center_vertical"
     android:textSize="18dp"
-    android:text="test"
-    android:layout_height="44.dp"/>
+    android:text="test111"
+    android:layout_height="wrap_content" />
 </RelativeLayout>

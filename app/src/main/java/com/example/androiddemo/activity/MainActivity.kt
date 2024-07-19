@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.activity.ActivityLifecycleActivity
 import com.example.androiddemo.R
 import com.example.androiddemo.adapter.MyBaseAdapter
 import com.example.databinding.DataBindingActivity
@@ -16,7 +17,7 @@ import com.example.databinding.DataBindingActivity
 class MainActivity : AppCompatActivity(), MyBaseAdapter.OnItemClickListener {
 
     private var listView: RecyclerView? = null
-    private  val list = listOf<String>("ViewDataBinding")
+    private  val list = mutableListOf<String>("ViewDataBinding", "Activity Lifecycle")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,8 +40,11 @@ class MainActivity : AppCompatActivity(), MyBaseAdapter.OnItemClickListener {
 
         when (position) {
             0 -> {
-                println("=========$position")
                 val intent = Intent(this@MainActivity, DataBindingActivity::class.java)
+                startActivity(intent)
+            }
+            1 -> {
+                val intent = Intent(this@MainActivity, ActivityLifecycleActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -17,3 +17,4 @@ rootProject.name = "AndroidDemo"
 include(":app")
 include(":Activity")
 include(":DataBinding")
+include(":XMLLayout")

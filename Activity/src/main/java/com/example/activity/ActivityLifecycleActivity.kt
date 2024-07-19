@@ -12,10 +12,8 @@ class ActivityLifecycleActivity : AppCompatActivity() {
 
         val navigationBtn = findViewById<Button>(R.id.navigation_button)
         navigationBtn.setOnClickListener {
-            println("========navigationBtn")
-//            val intent = Intent(this@ActivityLifecycleActivity, NavigationActivity::class.java)
-//            startActivity(intent)
-
+            val intent = Intent(this@ActivityLifecycleActivity, NavigationActivity::class.java)
+            startActivity(intent)
         }
 
         println("========onCreate")
