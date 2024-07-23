@@ -12,7 +12,7 @@ class MyBaseAdapter(private val datas: List<String>,
                     private val onClickListener: OnItemClickListener
 ) : RecyclerView.Adapter<MyBaseAdapter.ViewHolder>() {
     interface OnItemClickListener {
-        fun onItemClick(position: Int)
+        fun onItemClick(position: Int, item: String)
     }
 
     override fun getItemCount(): Int {
@@ -32,15 +32,15 @@ class MyBaseAdapter(private val datas: List<String>,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = datas[position]
         holder.title.text = item
-        holder.bind(position, onClickListener)
+        holder.bind(position, item, onClickListener)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView = view.findViewById(R.id.title)
 
-        fun bind(position: Int, clickListener: OnItemClickListener) {
+        fun bind(position: Int, item: String, clickListener: OnItemClickListener) {
             itemView.setOnClickListener{
-                clickListener.onItemClick(position)
+                clickListener.onItemClick(position, item)
             }
         }
     }

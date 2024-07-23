@@ -7,18 +7,18 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="jbr-17" />
+        <option name="gradleJvm" value="17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Activity" />
             <option value="$PROJECT_DIR$/DataBinding" />
+            <option value="$PROJECT_DIR$/MVVM" />
             <option value="$PROJECT_DIR$/XMLLayout" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>

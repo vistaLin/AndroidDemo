@@ -12,12 +12,17 @@ import com.example.activity.ActivityLifecycleActivity
 import com.example.androiddemo.R
 import com.example.androiddemo.adapter.MyBaseAdapter
 import com.example.databinding.DataBindingActivity
+import com.example.mvvm.ui.MVVMDemoActivity
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 
 class MainActivity : AppCompatActivity(), MyBaseAdapter.OnItemClickListener {
 
     private var listView: RecyclerView? = null
-    private  val list = mutableListOf<String>("ViewDataBinding", "Activity Lifecycle")
+    private  val list = mutableListOf<String>("dataBinding", "activityLifecycle", "MVVM")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,11 +37,28 @@ class MainActivity : AppCompatActivity(), MyBaseAdapter.OnItemClickListener {
         val adapter = MyBaseAdapter(datas = list, this)
         listView?.adapter = adapter
 
+        main()
+    }
+
+    fun main() = runBlocking {
+       doWorld()
+        println("===Done")
+    }
+
+    suspend fun doWorld() = coroutineScope {
+//        launch {
+//            delay(2000L)
+//            println("===world 2")
+//        }
+        launch {
+            delay(1000)
+            println("===World!")
+        }
+        println("===Hello")
     }
 
 
-
-    override fun onItemClick(position: Int) {
+    override fun onItemClick(position: Int, item: String) {
 
         when (position) {
             0 -> {
@@ -45,6 +67,10 @@ class MainActivity : AppCompatActivity(), MyBaseAdapter.OnItemClickListener {
             }
             1 -> {
                 val intent = Intent(this@MainActivity, ActivityLifecycleActivity::class.java)
+                startActivity(intent)
+            }
+            2 -> {
+                val intent = Intent(this@MainActivity, MVVMDemoActivity::class.java)
                 startActivity(intent)
             }
         }
