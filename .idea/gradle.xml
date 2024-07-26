@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/MVVM" />
             <option value="$PROJECT_DIR$/XMLLayout" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fragment" />
           </set>
         </option>
       </GradleProjectSettings>
